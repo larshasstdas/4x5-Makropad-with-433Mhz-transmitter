@@ -4,21 +4,24 @@ This project is about a Makropad that has 20 keys in a 4x5 matrix with a 433Mhz 
 
 ---
 
-##Motivation
+## Motivation
 
 In a previous project i made a wireless power switch for my PC but as it is only a singular button it feels quite chunky. And i also always had the interest in controlling my LED strips in my room and my PC lighting i got the idea of making a makropad that combines all those features. It should also have usual makropad funktion like adjusting the sound volume and shortcuts. 
 
 ---
 
-##PCB
+## PCB
 
-I am using the RP2040 as a microcontroller it has everything i need and can be soldered onto the pcb with castelladed pads. The same goes for the 433MHz transmitter module the STX882. I also have the option to add a display but I am leaving that open as of now. Furthermore there are Hotswap pockets so i can easily spwap broken switches. And for the LED I am using the SK6812MINI-E, a reverse mount LED.
+I am using the RP2040 as a microcontroller it has everything i need and can be soldered onto the pcb with castelladed pads. The same goes for the 433MHz transmitter module the STX882. I also have the option to add a display but I am leaving that open as of now. Furthermore there are Hotswap pockets so i can easily spwap broken switches. And for the LED I am using the SK6812MINI-E, a reverse mount LED. The switches are using a matrix so they need less pins and the LEDs are in an addressable LED chain.
 
 All the PCB files are in the KiCad Folder.
 
+<img width="1261" height="739" alt="image" src="https://github.com/user-attachments/assets/53fd4799-6ba3-4de2-a738-b3363492ecb7" />
+
+
 ---
 
-##Files
+## Files
 
 ```
 KiCad/
@@ -29,4 +32,5 @@ KiCad/
    ├──Gerber (and .zip)
    └── Footprint Libarys (.pretty)
 └──Symbol Libarys (.sym)
+BOM.csv
 ```

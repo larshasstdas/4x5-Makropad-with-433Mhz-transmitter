@@ -21,9 +21,26 @@ All the PCB files are in the KiCad Folder.
 
 ---
 
+## Case
+
+The CAD files for the Case are in the CAD folder. There are the source files from creo parametric (my cad tool), the step-files and the stl-files each in one folder. They contain a file for the top and the bottom part.
+
+---
+
 ## Files
 
 ```
+CAD/
+├──Creo/
+   ├──Case_top.prt
+   ├──Case_bottom.prt
+   └──Case.asm
+├──stl/
+   ├──Case_top.stl
+   └──Case_bottom.stl
+└──stp/
+   ├──Case_top.stp
+   └──Case_bottom.stp
 KiCad/
 ├──Makropad/
    ├──Makropad.kicad_pro

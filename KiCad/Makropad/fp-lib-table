@@ -1,0 +1,7 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Makropad") (type "KiCad") (uri "C:/Users/Julian/Desktop/Makropad.pretty") (options "") (descr ""))
+	(lib (name "RP2040ZERO") (type "KiCad") (uri "${KIPRJMOD}/RP2040ZERO.pretty") (options "") (descr ""))
+	(lib (name "STX882") (type "KiCad") (uri "${KIPRJMOD}/STX882.pretty") (options "") (descr ""))
+	(lib (name "Switch_Keyboard_Hotswap_Kailh") (type "KiCad") (uri "${KIPRJMOD}/Switch_Keyboard_Hotswap_Kailh.pretty") (options "") (descr ""))
+)

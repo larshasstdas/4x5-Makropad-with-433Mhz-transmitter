@@ -29,8 +29,9 @@ KiCad/
    ├──Makropad.kicad_pro
    ├──Makropad.kicad_pcb
    ├──Makropad.kicad_sch
-   ├──Gerber (and .zip, includes the Pick&Place file)
    └── Footprint Libarys (.pretty)
-└──Symbol Libarys (.sym)
-BOM.csv
+├──Symbol Libarys (.sym)
+├──Gerber (and .zip)
+├──Pick&Place.csv
+└──BOM.csv
 ```

@@ -1,0 +1,14 @@
+Part,Description,Quantity,Price (EUR),LCSC #,Link
+Waveshare RP2040-Zero,MCU module USB-C castellated (no-header variant),1,4.00,,https://eckstein-shop.de/WaveShare-RP2040-Zero-MCU-Board-Mini-Version
+STX882,433 MHz ASK/OOK transmitter module (+ spring antenna),1,6.99,,https://www.amazon.de/dp/B0D3TGHD7H/
+SK6812MINI-E,Addressable RGB LED with integrated driver (reverse mount),20,6.59,,https://www.amazon.de/gp/product/B0DQ8HXSQS/
+74AHCT1G125,Single tri-state buffer / level shifter 3.3V->5V (SOT-353-5),1,0.20,C7484,https://www.reichelt.de/de/de/shop/produkt/tristate-buffer_enable_2_5_5_v_sot-353-5-219156
+Gateron Pro Milky Yellow,Linear 5-pin hotswap switch,20,6.80,,https://inputgear.de/products/gateron-pro-milky-yellow-switch?variant=56226523775320
+Kailh MX Hotswap Socket,MX hotswap socket (THT),20,7.83,,https://www.amazon.de/gp/product/B07K8CCMQZ/
+Keycaps 1u,Opaque keycaps (light shows around switch base),20,10.71,,https://www.amazon.de/gp/product/B0F1YQGJ35/
+1N4148W,Small-signal switching diode 100V 150mA (SOD-123),20,0.40,C81598,https://www.reichelt.de/de/de/shop/produkt/kleinsignal-schalt-diode_100_v_150_ma_sod-123-219382
+100nF capacitor,Decoupling capacitor X7R 50V (0603),21,0.63,C14663,https://www.reichelt.de/de/de/shop/produkt/mlcc_0603_100nf_50v_x7r_-5_-429035
+330 ohm resistor,Signal series resistor on LED data line (0603),1,0.02,C23138,https://www.reichelt.de/de/de/shop/produkt/smd-widerstand_0603_330_ohm_100_mw_1_-89424
+I2C display header,4-pin Dupont header for optional display (2.54mm),1,,,
+PCB,Fabricated 4x5 macropad board,1,33.67,,
+3D-printed case,Top + bottom halves; filament (files in CAD/),1,1.00,,

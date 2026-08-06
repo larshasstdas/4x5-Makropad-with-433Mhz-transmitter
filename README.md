@@ -23,7 +23,7 @@ All the PCB files are in the KiCad Folder.
 
 ## Bill of Materials
 
-All SMD/through-hole parts are soldered onto the PCB; the case is 3D-printed (files in `CAD/`). Prices are approximate — replace with what you paid.
+Bought the parts so they would be as cheap as possible. Did not buy the display pins as i do not plan on using it for now. It is just an option for the future.
 
 | Part                      | Description                                       | Qty | Unit Price | Link |
 | ------------------------- | ------------------------------------------------- | --- | ---------- | ---- |

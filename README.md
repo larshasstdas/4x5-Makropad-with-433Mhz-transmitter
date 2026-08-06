@@ -72,6 +72,6 @@ KiCad/
    └── Footprint Libarys (.pretty)
 ├──Symbol Libarys (.sym)
 ├──Gerber (and .zip)
-├──Pick&Place.csv
-└──BOM.csv
+└──Pick&Place.csv
+BOM.csv
 ```

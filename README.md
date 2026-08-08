@@ -10,6 +10,12 @@ In a previous project i made a wireless power switch for my PC but as it is only
 
 ---
 
+## How it works
+
+The RP2040 registers which key is pressed. It send that iformation to a daemon on my pc which has the information of what that key actually does. The programm can also send information to the makropad to what each LED should be. If the button is pressed that is used for turning the PC on the daemon can't answer because the PC is turned of. If the RP2040 does not get a signal back it sends the signal to the stx882 module resulting in turning the PC on. It can use a different function afterwards because the daemon can answer if that button is pressed.
+
+---
+
 ## PCB
 
 I am using the RP2040 as a microcontroller it has everything i need and can be soldered onto the pcb with castelladed pads. The same goes for the 433MHz transmitter module the STX882. I also have the option to add a display but I am leaving that open as of now. Furthermore there are Hotswap pockets so i can easily spwap broken switches. And for the LED I am using the SK6812MINI-E, a reverse mount LED. The switches are using a matrix so they need less pins and the LEDs are in an addressable LED chain.
@@ -52,6 +58,10 @@ The CAD files for the Case are in the CAD folder. There are the source files fro
 
 
 ---
+
+## How it is build
+
+The pcb is soldered on a hot plate and some parts by soldering iron. The switches get placed into the hotswaps and once that is done it is placed in the bottom half of the case. Afterwards the top part gets fitted onto the bottom part and the keycaps get pressed onto the switches.
 
 ## Files
 

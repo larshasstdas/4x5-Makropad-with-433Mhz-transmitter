@@ -46,7 +46,10 @@ Bought the parts so they would be as cheap as possible. Did not buy the display 
 
 ## Case
 
-The CAD files for the Case are in the CAD folder. There are the source files from creo parametric (my cad tool), the step-files and the stl-files each in one folder. They contain a file for the top and the bottom part.
+The CAD files for the Case are in the CAD folder. There are the source files from creo parametric (my cad tool), the step-files and the stl-files each in one folder. They contain a file for the top and the bottom part and the Creo folder also has the assembly file for the makropad which you can see below. The only files needed for 3D.printing are the case_bottom and cas_top files. The rest are only used for the assembly.
+
+<img width="1403" height="899" alt="image" src="https://github.com/user-attachments/assets/9a2d44e4-6dc4-4761-ba0e-d2ba610bed14" />
+
 
 ---
 
@@ -57,13 +60,19 @@ CAD/
 ├──Creo/
    ├──Case_top.prt
    ├──Case_bottom.prt
-   └──Case.asm
+   ├──Case.asm
+   ├──pcb.asm
+   └──stx882.prt
 ├──stl/
    ├──Case_top.stl
    └──Case_bottom.stl
 └──stp/
    ├──Case_top.stp
-   └──Case_bottom.stp
+   ├──Case_bottom.stp
+   ├──PCB.stp
+   ├──stx882.stp
+   └──KS-3X Full Black Switch KS-3A10B060NN-X.stp
+   
 KiCad/
 ├──Makropad/
    ├──Makropad.kicad_pro

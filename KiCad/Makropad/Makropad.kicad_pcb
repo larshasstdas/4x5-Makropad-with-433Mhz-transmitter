@@ -5219,6 +5219,17 @@
 			(uuid "1305b7f2-f4a5-41ac-bd1e-3af08ec7a020")
 		)
 		(embedded_fonts no)
+		(model "D:/Downloads/RP2040_Zero_stp/RP2040_Zero.stp"
+			(offset
+				(xyz -8.95 -11.85 1)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "LED_SMD:LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount"
 		(layer "F.Cu")
@@ -8952,6 +8963,17 @@
 			(uuid "5ac1d7df-d9b3-4e10-a762-569472e5c6a7")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Julian/Desktop/Makropad/CAD/stp/stx882.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")

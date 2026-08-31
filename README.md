@@ -65,6 +65,11 @@ The CAD files for the case are in the CAD folder. There are the source files fro
 
 The pcb is soldered on a hot plate and some parts by soldering iron. The switches get placed into the hotswaps and once that is done it is placed in the bottom half of the case. Afterwards the top part gets fitted onto the bottom part and the keycaps get pressed onto the switches.
 
+<img width="1080" height="1920" alt="image" src="https://github.com/user-attachments/assets/4782ff0d-56fa-4c09-8d19-ebfb6055ca68" />
+<img width="1530" height="2040" alt="image" src="https://github.com/user-attachments/assets/37045730-6da7-450d-939b-11d2fbc0432d" />
+
+
+
 ---
 
 ## How to flash

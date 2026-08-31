@@ -88,31 +88,9 @@ I used VS Code with platform.io to flash the RP2040. Just connect with an USB-C 
 ## Files
 
 ```
-CAD/
-├──Creo/
-   ├──Case_top.prt
-   ├──Case_bottom.prt
-   ├──Case.asm
-   ├──pcb.asm
-   └──stx882.prt
-├──stl/
-   ├──Case_top.stl
-   └──Case_bottom.stl
-└──stp/
-   ├──Case_top.stp
-   ├──Case_bottom.stp
-   ├──PCB.stp
-   ├──stx882.stp
-   └──KS-3X Full Black Switch KS-3A10B060NN-X.stp
-   
+CAD/               Creo source files (top, bottom, pcb and assembly), stl files (top & bottom), step files
+Deamon/              
 KiCad/
-├──Makropad/
-   ├──Makropad.kicad_pro
-   ├──Makropad.kicad_pcb
-   ├──Makropad.kicad_sch
-   └── Footprint Libarys (.pretty)
-├──Symbol Libarys (.sym)
-├──Gerber (and .zip)
-└──Pick&Place.csv
+RP2040_Code/
 BOM.csv
 ```

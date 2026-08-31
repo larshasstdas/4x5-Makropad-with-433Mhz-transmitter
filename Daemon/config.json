@@ -1,0 +1,29 @@
+{
+    "serial":{
+        "port": "COM6",
+        "baudrate": 115200
+    },
+
+    "keys": {
+    "KEY_1": {"type": "text", "value": "1"},
+    "KEY_2": {"type": "text", "value": "2"},
+    "KEY_3": {"type": "text", "value": "3"},
+    "KEY_4": {"type": "text", "value": "4"},
+    "KEY_5": {"type": "text", "value": "5"},
+    "KEY_6": {"type": "text", "value": "6"},
+    "KEY_7": {"type": "text", "value": "7"},
+    "KEY_8": {"type": "text", "value": "8"},
+    "KEY_9": {"type": "text", "value": "9"},
+    "KEY_10": {"type": "text", "value": "10"},
+    "KEY_11": {"type": "text", "value": "11"},
+    "KEY_12": {"type": "text", "value": "12"},
+    "KEY_13": {"type": "text", "value": "13"},
+    "KEY_14": {"type": "text", "value": "14"},
+    "KEY_15": {"type": "text", "value": "15"},
+    "KEY_16": {"type": "text", "value": "16"},
+    "KEY_17": {"type": "text", "value": "17"},
+    "KEY_18": {"type": "text", "value": "18"},
+    "KEY_19": {"type": "text", "value": "19"},
+    "KEY_20": {"type": "text", "value": "20"}
+    }
+}

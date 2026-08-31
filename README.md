@@ -74,7 +74,7 @@ The pcb is soldered on a hot plate and some parts by soldering iron. The switche
 
 ## How to flash
 
-I used VS Code with platform.io to flash the RP2040. Just connect with an USB-C cable and press the flash button bottom left.
+I used VS Code with PlatformIO to flash the RP2040. Just connect with an USB-C cable and press the flash button bottom left.
 
 ---
 
@@ -96,6 +96,6 @@ I used VS Code with platform.io to flash the RP2040. Just connect with an USB-C 
 CAD/               Creo source files (top, bottom, pcb and assembly), stl files (top & bottom), step files
 Deamon/            Python files for the daemon, requirements.txt with all the libary versions  
 KiCad/             KiCad files, Gerber files (also as .zip), libarys, Pick&Place
-RP2040_Code/       Platform.io project with all files needed for flashing the RP2040
+RP2040_Code/       PlatformIO project with all files needed for flashing the RP2040
 BOM.csv
 ```

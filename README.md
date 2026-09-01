@@ -2,7 +2,7 @@
 
 <img width="1788" height="730" alt="WhatsApp Image 2026-08-31 at 16 35 43" src="https://github.com/user-attachments/assets/ed40fcc4-7af6-4d64-9f83-f5bf9086264a" />
 
-This project is about a Makropad that has 20 keys in a 4x5 matrix with a 433Mhz transmitter that is used to power my PC. Every key has an indiviually LED that will be changeable with an app on the PC.
+This project is about a Makropad that has 20 keys in a 4x5 matrix with a 433Mhz transmitter that is used to power my PC. Every key has an indiviually LED that will be changeable with the daemon on the PC. Here is a short [Demo Video](https://www.youtube.com/shorts/1YbLsw79irE).
 
 ---
 

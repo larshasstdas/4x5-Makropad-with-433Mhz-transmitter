@@ -2,7 +2,7 @@
 
 <img width="1788" height="730" alt="WhatsApp Image 2026-08-31 at 16 35 43" src="https://github.com/user-attachments/assets/ed40fcc4-7af6-4d64-9f83-f5bf9086264a" />
 
-This project is about a Makropad that has 20 keys in a 4x5 matrix with a 433Mhz transmitter that is used to power my PC. Every key has an indiviually LED that will be changeable with an app on the PC.
+This project is about a Makropad that has 20 keys in a 4x5 matrix with a 433Mhz transmitter that is used to power my PC. Every key has an indiviually LED that will be changeable with the daemon on the PC. Here is a short [Demo Video](https://www.youtube.com/shorts/1YbLsw79irE).
 
 ---
 
@@ -65,11 +65,16 @@ The CAD files for the case are in the CAD folder. There are the source files fro
 
 The pcb is soldered on a hot plate and some parts by soldering iron. The switches get placed into the hotswaps and once that is done it is placed in the bottom half of the case. Afterwards the top part gets fitted onto the bottom part and the keycaps get pressed onto the switches.
 
+<img width="1080" height="1920" alt="image" src="https://github.com/user-attachments/assets/4782ff0d-56fa-4c09-8d19-ebfb6055ca68" />
+<img width="1530" height="2040" alt="image" src="https://github.com/user-attachments/assets/37045730-6da7-450d-939b-11d2fbc0432d" />
+
+
+
 ---
 
 ## How to flash
 
-I used VS Code with platform.io to flash the RP2040. Just connect with an USB-C cable and press the flash button bottom left.
+I used VS Code with PlatformIO to flash the RP2040. Just connect with an USB-C cable and press the flash button bottom left.
 
 ---
 
@@ -91,6 +96,6 @@ I used VS Code with platform.io to flash the RP2040. Just connect with an USB-C 
 CAD/               Creo source files (top, bottom, pcb and assembly), stl files (top & bottom), step files
 Deamon/            Python files for the daemon, requirements.txt with all the libary versions  
 KiCad/             KiCad files, Gerber files (also as .zip), libarys, Pick&Place
-RP2040_Code/       Platform.io project with all files needed for flashing the RP2040
+RP2040_Code/       PlatformIO project with all files needed for flashing the RP2040
 BOM.csv
 ```

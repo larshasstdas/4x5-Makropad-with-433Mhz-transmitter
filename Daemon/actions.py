@@ -3,11 +3,12 @@ import os
 import webbrowser
 import led
 from led import handle_led
+from media import handle_media
 
 #TYPES
 #text:          a letter/number/word
 #hotkey:        keycombination e.g. Copy&Paste
-#volume:        volumeup, volumedown, playpause, volumemute
+#media:         volumeup, volumedown, playpause, volumemute
 #led:           nextMode, lastMode, brighten, darken
 #overlay        default, led, volume, ...
 #url:           opens url in actions_value
@@ -40,10 +41,10 @@ def handle_key(key, config, conn):
         pyautogui.hotkey(*keys)
     elif action_type == "led":
         handle_led(action_value)
-    elif action_type == "volume":
-        pyautogui.press(action_value)
-    elif action_type == "url":
-        webbrowser.open(action_value)
-    elif action_type == "launch":
-        os.startfile(action_value)
+    elif action_type == "media":
+        handle_media(action_value)
+    #elif action_type == "url":
+    #    webbrowser.open(action_value)
+    #elif action_type == "launch":
+    #    os.startfile(action_value)
     #elif action_type == "makro":

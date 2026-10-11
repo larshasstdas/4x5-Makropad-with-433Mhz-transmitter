@@ -18,9 +18,18 @@ The RP2040 registers which key is pressed. It send that information to a daemon 
 
 ---
 
+## Features
+
+- **remote PC wake** – a 433 MHz transmitter powers on the PC if the daemon is not responding (pc is turned off)
+- **individual RBG per key** - different modes and each key can have an idividual color
+- **Multiple layouts** - with the press of a button all keys can have a different function
+- **Sleep mode** - if the PC is turned off the macropad enters a sleep mode
+
+---
+
 ## PCB
 
-I am using the RP2040 as a microcontroller it has everything i need and can be soldered onto the pcb with castelladed pads. The same goes for the 433MHz transmitter module the STX882. I also have the option to add a display but I am leaving that open as of now. Furthermore there are Hotswap pockets so i can easily spwap broken switches. And for the LED I am using the SK6812MINI-E, a reverse mount LED. The switches are using a matrix so they need less pins and the LEDs are in an addressable LED chain.
+I am using the RP2040 as a microcontroller it has everything i need and can be soldered onto the pcb with castelladed pads. The same goes for the 433MHz transmitter module the STX882. I also have the option to add a display but I am leaving that open as of now. Furthermore there are Hotswap pockets so i can easily swap broken switches. And for the LED I am using the SK6812MINI-E, a reverse mount LED. The switches are using a matrix so they need less pins and the LEDs are in an addressable LED chain.
 
 All the PCB files are in the KiCad Folder.
 
@@ -90,6 +99,34 @@ I used VS Code with PlatformIO to flash the RP2040. Just connect with an USB-C c
 
 ---
 
+## How to change or make a new layout
+
+To change or make a new layout open the **config.json**. Under **"layouts"** you will find all the layouts and key definitions with what each key does. Each layout has their own name. The best way to start a new layout is to copy a existing layout an edit the keys. 
+
+Each key need two types of information. First is the type of action and the other is a value for what action will be taken. In the following are the all types with what actions can be made:
+
+|type           | value                                             | description                                                   |
+|---------------|---------------------------------------------------|---------------------------------------------------------------|
+|text           | can be a letter,number,character or word          | Types the value                                               |                            
+|hotkey         | a key combination, e.g. Copy is `"ctrl" + "c"`    | Presses the key combo                                         |               
+|media          | `volumeup`, `volumedown`                          | Media/volume control                                          |
+|               | `next`, `prev`                                    | next song or video                                            |
+|               | `playpause`                                       | pauses or continues playing something                         |
+|               | `volumemute`, `micmute`, `bothmute`               | mutes audio                                                   |                                  
+|led            | `nextMode`, `lastMode`                            | sets led mode                                                 |
+|               | `brighten`, `darken`                              | adjusts led brightness                                        |
+|               | `faster`, `slower`                                | adjusts mode speed (not every mode)                           |
+|               | `nextColor`, `lastColor`                          | changes led color (not every mode)                            |
+|               | `nextColorFine`, `lastColorFine`                  | changes the led color in smaller steps                        |                   
+|overlay        | name of a layout, e.g `default` or `led`          | switches to that layout                                       |
+|inactive       | number between `0`-`255`                          | no function, the value sets led brightness (0 = off)          |
+
+Currently set layouts are default, led, led_2 and media. The mode for the LEDs continues as a layout is swapped, although some LEDs might turn off as the key could be set as inactiv with a value of 0. In the following picture is a visualization of the current layouts for handling the LEDs and media.
+
+
+
+---
+
 ## Files
 
 ```
@@ -99,3 +136,12 @@ KiCad/             KiCad files, Gerber files (also as .zip), libarys, Pick&Place
 RP2040_Code/       PlatformIO project with all files needed for flashing the RP2040
 BOM.csv
 ```
+---
+
+## Planned Features
+
+- an UI so the layout and LEDs can be set by drag & drop (this needs a whole rewriting of the code so the daemon can handle api)
+- with the UI there could be layouts to handle smarthome functions e.g. led stripes
+- a mode that reacts to music and an actual usage of the directly setting the leds mode
+- a soundboard layout that plays safed sounds
+- a display that shows what the buttons of the active layout do

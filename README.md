@@ -123,6 +123,7 @@ Each key need two types of information. First is the type of action and the othe
 
 Currently set layouts are default, led, led_2 and media. The mode for the LEDs continues as a layout is swapped, although some LEDs might turn off as the key could be set as inactiv with a value of 0. In the following picture is a visualization of the current layouts for handling the LEDs and media.
 
+<img width="2734" height="779" alt="macropad_layouts" src="https://github.com/user-attachments/assets/09077af9-78bc-4007-807f-713f2a40b97a" />
 
 
 ---

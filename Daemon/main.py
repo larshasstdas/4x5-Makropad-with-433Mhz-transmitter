@@ -10,35 +10,51 @@ TYPE_KEY        = ord('K')
 TYPE_MODE       = ord('M')
 TYPE_LED        = ord('L')
 
+CONN_TIMEOUT = 5
+
 def main():
     config = load_config()
-    port = config["serial"]["port"]
-    baudrate = config["serial"]["baudrate"]
-    connection = connect(port, baudrate)                     
+    serial_conn = config["serial"]
+    connection = connect(serial_conn)
+    led.led_update = True
+    last_conn = time.time();                     
     
     while True:
         
         try:
             msg = readData(connection)
         except serial.SerialException:
-            print("Verbindung verloren, versuche neu zu verbinden...")
+            #print("Verbindung verloren, versuche neu zu verbinden...")
             try:
                 connection.close()
             except Exception:
                 pass
-            connection = connect(port, baudrate)
+            connection = connect(serial_conn)
+            led.led_update = True
+            last_conn = time.time(); 
             continue
 
         if msg is not None:
+            last_conn = time.time(); 
             msg_type, data = msg
             if msg_type == TYPE_PINGPONG:
                 sendData(connection, TYPE_PINGPONG)
             elif msg_type == TYPE_KEY and len(data) == 1:
                 handle_key(f"KEY_{data[0]}", config, connection)
 
+        if time.time() - last_conn > CONN_TIMEOUT:
+            try:
+                connection.close()
+            except Exception:
+                pass
+            connection = connect(serial_conn)
+            led.led_update = True
+            last_conn = time.time(); 
+            continue
+
         led.sendLed(connection, config)
         time.sleep(0.005)
         
-        
+           
 if __name__ == "__main__":
     main()           

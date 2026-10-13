@@ -1,4 +1,5 @@
 import serial
+import serial.tools.list_ports
 import time
 
 STARTBYTE = 0xAB
@@ -9,14 +10,26 @@ _length = 0
 _current_length = 0
 _data = bytearray(60)
 
-def connect(port, baudrate):
+def connect(serial_conn):
 
-    while True:
-        try:    
-            return serial.Serial(port,baudrate, timeout=0.1) 
-            
-        except serial.SerialException:
-            time.sleep(0.2)  
+    port = None
+    
+    while port is None:
+        ports = serial.tools.list_ports.comports(include_links=False)
+        
+        
+        for p in ports:
+            if p.vid == serial_conn["vid"] and  p.pid == serial_conn["pid"]:
+                port = p.device
+                break
+        
+        if port is not None:
+            try:    
+                return serial.Serial(port,serial_conn["baudrate"], timeout=0.1) 
+            except serial.SerialException:
+                port = None
+                
+        time.sleep(0.2)  
 
 def readData(conn):
     

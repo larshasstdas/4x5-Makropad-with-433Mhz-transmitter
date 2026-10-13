@@ -1,6 +1,7 @@
 {
     "serial":{
-        "port": "COM6",
+        "vid": 11914,
+        "pid": 3,
         "baudrate": 115200
     },
 

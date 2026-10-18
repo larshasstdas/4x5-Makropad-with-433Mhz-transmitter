@@ -1,7 +1,8 @@
 import time
 import serial
 import led
-from config import load_config
+import pipe
+import store
 from serial_comm import connect, readData, sendData
 from actions import handle_key
 
@@ -13,8 +14,8 @@ TYPE_LED        = ord('L')
 CONN_TIMEOUT = 5
 
 def main():
-    config = load_config()
-    serial_conn = config["serial"]
+    serial_conn = store.config["serial"]
+    pipe.start_pipe()
     connection = connect(serial_conn)
     led.led_update = True
     last_conn = time.time();                     
@@ -40,7 +41,8 @@ def main():
             if msg_type == TYPE_PINGPONG:
                 sendData(connection, TYPE_PINGPONG)
             elif msg_type == TYPE_KEY and len(data) == 1:
-                handle_key(f"KEY_{data[0]}", config, connection)
+                handle_key(f"KEY_{data[0]}", store.config, connection)
+
 
         if time.time() - last_conn > CONN_TIMEOUT:
             try:
@@ -51,9 +53,15 @@ def main():
             led.led_update = True
             last_conn = time.time(); 
             continue
-
-        led.sendLed(connection, config)
+        
+        if led.led_update is True:
+            led.led_update = False
+            led.sendLed(connection, store.config)
+            store.write_state()
+            pipe.sendPipe({"type": "state", "state": store.state})
+            
         time.sleep(0.005)
+        
         
            
 if __name__ == "__main__":

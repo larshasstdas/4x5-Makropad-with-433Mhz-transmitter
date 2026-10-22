@@ -139,6 +139,11 @@ BOM.csv
 ```
 ---
 
+## Hackatime
+
+https://hackatime.hackclub.com/my/projects/Makropad
+
+
 ## Planned Features
 
 - an UI so the layout and LEDs can be set by drag & drop (this needs a whole rewriting of the code so the daemon can handle api)

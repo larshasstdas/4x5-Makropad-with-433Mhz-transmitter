@@ -141,7 +141,7 @@ BOM.csv
 
 ## Hackatime
 
-https://hackatime.hackclub.com/my/projects/Makropad
+https://hackatime.hackclub.com/@larshasstdas/project/Makropad
 
 
 ## Planned Features
